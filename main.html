@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container">
+    <!-- Player Input View -->
+    <div id="player-input" class="card">
+      <h2>Enter Player Names</h2>
+      <div class="input-row">
+        <label for="player-1">Player 1 (X)</label>
+        <input type="text" id="player-1" placeholder="Enter player 1 name" />
+      </div>
+      <div class="input-row">
+        <label for="player-2">Player 2 (O)</label>
+        <input type="text" id="player-2" placeholder="Enter player 2 name" />
+      </div>
+      <div class="actions">
+        <button id="submit">Start Game</button>
+      </div>
+    </div>
 
+    <!-- Game View (hidden until submit) -->
+    <div id="game" class="card" style="display:none;">
+      <h1>Tic Tac Toe</h1>
+      <div class="message" id="message">Message here</div>
+
+      <div class="board" id="board" aria-label="Tic Tac Toe board">
+        <div class="cell" id="1" role="button" aria-label="cell 1"></div>
+        <div class="cell" id="2" role="button" aria-label="cell 2"></div>
+        <div class="cell" id="3" role="button" aria-label="cell 3"></div>
+        <div class="cell" id="4" role="button" aria-label="cell 4"></div>
+        <div class="cell" id="5" role="button" aria-label="cell 5"></div>
+        <div class="cell" id="6" role="button" aria-label="cell 6"></div>
+        <div class="cell" id="7" role="button" aria-label="cell 7"></div>
+        <div class="cell" id="8" role="button" aria-label="cell 8"></div>
+        <div class="cell" id="9" role="button" aria-label="cell 9"></div>
+      </div>
+
+      <div class="controls">
+        <button id="restart">Restart</button>
+        <button id="change-players">Change Players</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
